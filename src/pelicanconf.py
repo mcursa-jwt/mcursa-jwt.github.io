@@ -45,3 +45,5 @@ DEFAULT_PAGINATION = False
 #RELATIVE_URLS = True
 
 THEME = "./theme/SoMA"
+GITHUB_URL = "https://github.com/mcursa-jwt"
+GITHUB_POSITION = "left"
