@@ -6,3 +6,4 @@
 *.swp
 *.out
 *.py[cod]
+src/output/*
