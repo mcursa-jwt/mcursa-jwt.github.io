@@ -32,23 +32,27 @@
         {% include 'conway_canvas.html' %}
         {% include 'github.html' %}
         
-        <div class="LaunchyardDetail">
+        <div class="biodetail">
+            
+            <img class="profilepic" src="./theme/images/Kanizsa_triangle.svg" alt="Kanizsa_triangle">
             <p>
-                <a href="{{ SITEURL }}/">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</a><img src="http://www.launchyard.com/images/LY-identity.png" width="100" height="100" alt="my avatar"><br/>
-                mcursa jwt<br/>
+                mcursa jwt
             </p>
             <p>
-                a human web developer<br/>
+                human web developer
+            </p>
+            <p>
                 <!-- bio here in the future -->
-                {% include 'conway_controls.html' %}
-
-
             </p>
+            {% include 'conway_controls.html' %}
+            
         </div>
+        
         
         {% block content %}
         {% endblock %}
         <section id="extras" >
+            
             
             
         </section><!-- /#extras -->
