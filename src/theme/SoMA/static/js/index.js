@@ -22,11 +22,6 @@ game.gameSetUp()
 game.fillArray();
 
 
-let MAX_SIMULATION_TIMEOUT = 1100; // Higher value is slower, set <input> max at index.html.
-let simulation_timeout = MAX_SIMULATION_TIMEOUT - speed_slider.value;
-let gen_per_sec = 1/(simulation_timeout/1000)
-updateElementValue("speed-label","Speed: "+ gen_per_sec.toFixed(2) +" gen/sec")
-
 let isPlaying = false;
 let interval_id = 0;
 
