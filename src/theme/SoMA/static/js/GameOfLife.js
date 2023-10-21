@@ -22,6 +22,17 @@ class GameOfLife {
         this.inactive_array = [];
         this.generation = 0
 
+        this.resetGeneration = () => {
+            this.generation = 0
+            updateElementValue("gen-counter","Generation: "+ this.generation)
+        }
+        
+        this.increaseGeneration = () => {
+            this.generation++
+            updateElementValue("gen-counter","Generation: "+ this.generation)
+        }
+
+
         this.arrayInitialization = () => {
 
             for (let i = 0; i < this.cells_in_rows; i++) {
@@ -31,6 +42,7 @@ class GameOfLife {
                 }
             }
             this.inactive_array = this.active_array;
+            this.resetGeneration();
 
         };
 
@@ -42,6 +54,7 @@ class GameOfLife {
                     this.active_array[i][j] = (Math.random() > 0.5) ? 1 : 0;
                 }
             }
+            this.resetGeneration();
 
         };
 
@@ -108,7 +121,7 @@ class GameOfLife {
             }
 
         };
-
+        
         this.updateLifeCycle = () => {
 
             for (let i = 0; i < this.cells_in_rows; i++) {
@@ -118,10 +131,9 @@ class GameOfLife {
                 }
             }
             this.active_array = this.inactive_array
-            this.generation++
-            updateElementValue("gen-counter","Generation: "+ this.generation)
-
+            this.increaseGeneration();
         };
+        
 
         this.gameSetUp = () => {
             this.arrayInitialization();
