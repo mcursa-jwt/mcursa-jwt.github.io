@@ -10,10 +10,15 @@ function controls() {
     }
     // start simulation
     start_btn.addEventListener("click", () => {
+      if (!isPlaying) {
       isPlaying = true;
       if (interval_id)
         clearInterval(interval_id);
       playSimulation()
+      } else {
+        isPlaying = false;
+        clearInterval(interval_id);
+      }
     })
   
     // default, start random
@@ -27,13 +32,6 @@ function controls() {
       playSimulation()
     })
   
-    // pause board
-    pause_btn.addEventListener("click", () => {
-      if (isPlaying) {
-        isPlaying = false;
-      }
-      clearInterval(interval_id);
-    })
   
     // reset board
     reset_btn.addEventListener("click", () => {
